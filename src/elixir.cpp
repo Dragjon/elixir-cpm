@@ -122,8 +122,8 @@ const Task& getTaskFromList(const string& name, const vector<Task>& taskList) {
     throw runtime_error("Task not found: " + name);
 }
 
-// Returns the task object instead of the const task reference so that it can be updated by reference
-Task& getTaskObjectFromList(const string& name, vector<Task>& taskList) {
+// Returns the task reference instead of the const task reference so that it can be updated by reference
+Task& getTaskRefFromList(const string& name, vector<Task>& taskList) {
     for (auto& t : taskList) {
         if (t.name == name) return t; 
     }
@@ -187,7 +187,7 @@ void populateSuccessors(vector<Task>& taskList) {
         // For each of its dependencies
         for (const string& depName : t.dependencies) {
             // The dependencies of a task means that the task is the successor of the dependencies
-            Task& depTask = getTaskObjectFromList(depName, taskList);
+            Task& depTask = getTaskRefFromList(depName, taskList);
             depTask.successors.push_back(t.name);
         }
     }
