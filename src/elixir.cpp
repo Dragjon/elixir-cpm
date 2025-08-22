@@ -171,7 +171,7 @@ void updateAllEarlyVars(vector<Task>& taskList) {
 //////////////////////////////////////////////////////////////////////////////////////////
 // Backward pass for late start (LS) and late finish (LF)                               //
 // Late Finish (LF): the latest time a task can finish without delaying the project.    //
-// For the last task, LF = EF as the task has 0 dependencies)                           //
+// For the last task, LF = EF as the task has 0 successors)                           //
 // For other tasks                                                                      //
 //                  LF = min(LS of all successor tasks)                                 //
 //                  ie. Task must finish before the earliest LS of its successors,      //
