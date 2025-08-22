@@ -176,7 +176,6 @@ void updateAllEarlyVars(vector<Task>& taskList) {
 //                  LF = min(LS of all successor tasks)                                 //
 //                  ie. Task must finish before the earliest LS of its successors,      //
 //                      otherwise one of them will be forced to start late.             //        
-// If a task has no dependencies, we should be starting them at time 0 obviously        //
 // Early Finish (EF): the earliest time a task can finish.                              //
 //                   EF = ES of task + duration                                         //
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -295,7 +294,7 @@ void outputTimelineCSV(const vector<Task>& taskList, const string& filename = "t
                 if (t.slack == 0) file << ",C"; // critical task
                 else file << ",X"; // task active
             }
-            else file << ",O"; // task inactive
+            else file << ",-"; // task inactive
         }
         file << "\n";
     }
