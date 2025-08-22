@@ -1,0 +1,5 @@
+task,duration,dependencies
+a,2,
+b,3,a
+c,2,a
+d,5,b;c
