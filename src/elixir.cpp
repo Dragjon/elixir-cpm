@@ -265,7 +265,7 @@ void outputTaskCSV(const vector<Task>& taskList, const string& filename = "outpu
 //      showing project schedules, task dependencies, and progress over time
 // Gantt-chart for project management: https://en.wikipedia.org/wiki/Gantt_chart
 // NOTE: This is not exactly a Gantt-chart as csv can't fully express these charts, I used a very simplified model instead.
-// Each column is a time unit; C = Tasks on critical path, X = task active, O = inactive
+// Each column is a time unit; C = Tasks on critical path, X = task active, - = inactive
 void outputTimelineCSV(const vector<Task>& taskList, const string& filename = "timeline.csv") {
     // Determine project length
     int projectLength = 0;
