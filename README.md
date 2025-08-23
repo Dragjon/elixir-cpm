@@ -6,3 +6,5 @@ Project Management Solution using simplified CPM
 3) Compile with any c++ compiler of your choice eg. `g++ -O3 .\elixir.cpp -o elixir.exe`
 4) Ensure that you have a file named `tasks.csv` which should have the same format as the example provided in the repo
 5) Run `./elixir.exe`
+# TODO
+* Deal with resource management instead of solely using the Critical-Path-Method (have to first understand the Resource-Constrained Project Scheduling Problem (https://www.iste.co.uk/data/doc_dtalmanhopmh.pdf) and how graph theory works)
